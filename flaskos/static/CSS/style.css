@@ -25,7 +25,7 @@ body {
 .academytop {
     position: absolute;
     top: 180px;
-    left: 850px;
+    left: 870px;
 }
 
 .academytop img {
@@ -34,6 +34,34 @@ body {
     border-radius: 35px;
     opacity: 0.8;
 }
+
+.flowers{
+    position: absolute;
+    top: 230px;
+    left: 1145px;
+}
+
+.flowers img {
+    width: 250px;
+    height: auto;
+    border-radius: 35px;
+    transform: scaleX(-1);
+    opacity: 0.7;
+}
+
+.flowers_2 {
+    position: absolute;
+    top: 230px;
+    left: 602px;
+}
+
+.flowers_2 img {
+    width: 250px;
+    height: auto;
+    border-radius: 35px;
+    opacity: 0.7;
+}
+
 
 h1 {
     color: rgba(249, 118, 6, 0.588);
@@ -87,4 +115,12 @@ h2 {
     min-width: 13.01in;
     margin: 0 auto;
     padding: 20px;
+}
+
+.person_G {
+    color: rgba(47, 118, 229, 0.8);
+}
+
+.person_E{
+    color: rgba(243, 42, 202, 0.8);
 }
