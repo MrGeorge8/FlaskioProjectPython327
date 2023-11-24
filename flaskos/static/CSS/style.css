@@ -11,57 +11,31 @@ body {
 
 .sticker {
     position: absolute;
-    top: 260px;
-    left: 850px;
+    top: 40%;
+    left: 55%;
 }
 
 .sticker img {
-    width: 300px;
+    width: 70%;
     height: auto;
-    border-radius: 35px;
+    border: 1px solid rgba(113, 111, 111, 0.3);
+    border-radius: 30px;
     opacity: 0.7;
 }
 
 .academytop {
     position: absolute;
-    top: 180px;
-    left: 870px;
+    top: 27%;
+    left: 55%;
 }
 
 .academytop img {
-    width: 250px;
+    width: 40%;
     height: auto;
+    border: 1px solid rgba(113, 111, 111, 0.3);
     border-radius: 35px;
     opacity: 0.8;
 }
-
-.flowers{
-    position: absolute;
-    top: 230px;
-    left: 1145px;
-}
-
-.flowers img {
-    width: 250px;
-    height: auto;
-    border-radius: 35px;
-    transform: scaleX(-1);
-    opacity: 0.7;
-}
-
-.flowers_2 {
-    position: absolute;
-    top: 230px;
-    left: 602px;
-}
-
-.flowers_2 img {
-    width: 250px;
-    height: auto;
-    border-radius: 35px;
-    opacity: 0.7;
-}
-
 
 h1 {
     color: rgba(249, 118, 6, 0.588);
