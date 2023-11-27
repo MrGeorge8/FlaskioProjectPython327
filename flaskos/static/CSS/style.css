@@ -2,6 +2,7 @@ body {
     background: rgba(248, 223, 244, 0.682);
     margin: 0;
     padding: 5px;
+    max-width: 100%;
     background: url(https://images.unsplash.com/photo-1485841890310-6a055c88698a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) no-repeat center center fixed;
     background-size: cover;
     cursor: pointer;
@@ -9,30 +10,16 @@ body {
     margin: 0;
 }
 
-.sticker {
-    position: absolute;
-    top: 33%;
-    left: 55%;
-}
-
-.sticker img {
-    width: 73%;
-    height: auto;
-    border: 1px solid rgba(113, 111, 111, 0.3);
-    border-radius: 30px;
-    opacity: 0.7;
-}
-
 .academytop {
     position: absolute;
-    top: 27%;
-    left: 55%;
+    top: 23%;
+    left: 59%;
 }
 
 .academytop img {
     width: 40%;
     height: auto;
-    border: 1px solid rgba(113, 111, 111, 0.3);
+    border: 1px solid rgba(113, 111, 111, 0.16);
     border-radius: 35px;
     opacity: 0.8;
 }
@@ -45,11 +32,7 @@ h1 {
     transition: color 0.1s linear;
 }
 
-h1:hover {
-    color: #b77ae9;
-}
-
-a {
+.menu a {
     color: rgba(243, 243, 237, 1);
     font-size: 2rem;
     font-family: 'Bebas Neue', sans-serif;
@@ -60,7 +43,7 @@ a {
     transition: color 0.3s linear;
 }
 
-a:hover {
+.menu a:hover {
     color: #f7fe00;
 }
 
@@ -68,7 +51,7 @@ a:hover {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    background: rgba(231, 157, 205, 0.833);
+    background: rgba(231, 157, 205, 0.83);
     box-shadow: 2px 2px 11px -3px rgba(67, 67, 67, 0.888);
     padding: 20px;
     border-radius: 1.4rem;
@@ -77,18 +60,19 @@ a:hover {
 
 h2 {
     color: rgb(113, 111, 111);
+    width: 40%;
     font-family: 'Handjet', sans-serif;
     font-weight: 200;
     letter-spacing: 3px;
-    max-width: 430px;
+    width: 650px;
     white-space: normal;
 }
 
 .content {
-    max-width: 1200px;
+    max-width: 27.01in;
     min-width: 13.01in;
     margin: 0 auto;
-    padding: 20px;
+    padding: 30px;
 }
 
 .person_G {
@@ -97,4 +81,148 @@ h2 {
 
 .person_E{
     color: rgba(243, 42, 202, 0.8);
+}
+
+.flash{
+    position: absolute;
+    left: 440px;
+    top: 270px;
+    font-size: 1.3rem;
+}
+
+.flash.success{
+    position: absolute;
+    left: 440px;
+    top: 270px;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    background: rgba(53, 187, 40, 0.59);
+    border: 4px solid rgba(227, 224, 224, 0.27);
+    letter-spacing: 3px;
+    border-radius: 0.1em;
+}
+
+.flash.error{
+    position: absolute;
+    left: 440px;
+    top: 270px;
+    font-size: 1.8rem;
+    color: white;
+    background: rgba(229, 12, 18, 0.68);
+    border: 4px solid rgba(227, 224, 224, 0.27);
+    border-radius: 0.1em;
+    letter-spacing: 3px;
+}
+
+.scrolling{
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+    max-height: 300px;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 11px;
+
+}
+
+li>p{
+    border: 4px solid rgba(206, 203, 203, 0.14);
+    padding: 10px 20px;
+    border-radius: 0.8em;
+}
+
+li div{
+    padding: 10px 20px;
+    border: 3px solid rgba(206, 203, 203, 0.43);
+    border-radius: 1em;
+}
+
+p.title{
+    margin: 0;
+    font-weight: bold;
+    background: rgba(231, 157, 205, 0.17);
+    border-radius: 1em;
+    padding: 1px;
+}
+
+p.title a{
+    display: block;
+}
+
+.anonce {
+    margin-top: -1px;
+    margin-bottom: 40px;
+    background: #ffffff;
+    font-family: monospace;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.66);
+}
+
+textarea {
+    border: 3px solid rgba(225, 158, 241, 0.152);
+    background: rgba(187, 176, 197, 0.329);
+    color: rgb(90, 6, 141);
+    width: 400px;
+    height: 118px;
+    resize: none;
+}
+
+p input[type="submit"]{
+    background: rgba(240, 157, 96, 0.775);
+    color: rgba(255, 255, 255, 0.938);
+    border-radius: 0.3rem;
+    font-size: 1.6em;
+    font-family: monospace;
+    border: 1px solid color(display-p3 0.941 0.957 0.961);
+    transition: background-color 0.3s linear, color 0.3s ease;
+}
+
+p input[type="submit"]:hover {
+    background-color: #6c4eb6;
+    color: yellow;
+}
+
+p > input {
+    display: block;
+    border-radius: 0.7em;
+    border: 2px solid rgba(200, 149, 201, 0.12);
+    background: rgba(197, 159, 220, 0.29);
+}
+
+.a_menu {
+    color: rgba(249, 118, 6, 0.58);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    transition: background-color 0.3s linear;
+    margin: 5px;
+}
+
+.a_menu:hover{
+    background-color: rgba(88, 52, 176, 0.54);
+    color: yellow;
+
+}
+
+
+.page_post{
+    color: rgba(0, 0, 0, 0.84);
+    font-family: monospace;
+    font-size: 1.3em;
+    display: block;
+    max-height: 600px;
+    overflow-y: auto;
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 11px;
+    margin-top: -25px;
+    background: white;
+}
+
+.iput{
+    font-family: monospace;
+    font-size: 1.1em;
+    color: rgb(124, 122, 122);
+    font-family: monospace;
+    letter-spacing: 3px;
 }

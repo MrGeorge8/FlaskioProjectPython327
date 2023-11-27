@@ -1,11 +1,19 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-   <div class="sticker">
-        <img src="https://web-cpv.ru/wp-content/uploads/2020/10/samye-populjarnye-veb-frejmvorki-python-django-vs-flask-2a425d4.png" alt="">
-   </div>
-
 
 {{ super() }}
-<h2>Flask — это микрофреймворк для создания веб-приложений на языке программирования Python. Сочетая в себе простоту и гибкость, Flask позволяет разработчикам быстро создавать функциональные веб-приложения с минимальным объемом кода. В основе Flask лежит идея о том, что приложение может быть легким и эффективным, предоставляя при этом все необходимые инструменты для создания современных веб-решений. </h2>
+    <h2>Список статей:</h2>
+    <div class="scroll-container">
+    <ul class="scrolling">
+        {% for p in posts %}
+        <li>
+            <p class="title">
+                <a class="a_menu" href="{{url_for('show_post', alias=p.url)}}">{{ p.title }}</a>
+            </p>
+            <div class="anonce">{{ p.text[:314] | striptags }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

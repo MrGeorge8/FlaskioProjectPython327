@@ -1,0 +1,10 @@
+{%extends 'base.html' %}
+
+{% block content %}
+
+{{ super() }}
+    <div class="page_post">
+    <p> {{ post | safe }}</p>
+    </div>
+
+{% endblock %}
