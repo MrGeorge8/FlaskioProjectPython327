@@ -6,7 +6,10 @@
 {% for cat, msg in get_flashed_messages(True) %}
 <div class="flash {{ cat }}">{{ msg }}</div>
 {% endfor %}
+<div class="flamingo">
+<img src="{{ url_for('static', filename='images/kandinsky-download-1701115136499.png') }}" alt="flamingo">
 
+</div>
 <form action="{{ url_for('add_post') }}" method="post">
     <p class="iput"> Name page:<input type="text" name="name" required></p>
     <p class="iput"> URL page: <input type="text" name="url" required> </p>
