@@ -51,7 +51,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    background: rgba(248, 151, 165, 0.62);
+    background: rgba(255, 105, 180, 0.44);
     box-shadow: 2px 2px 11px -3px rgba(67, 67, 67, 0.888);
     padding: 20px;
     border-radius: 1.4rem;
@@ -140,7 +140,7 @@ li div{
 p.title{
     margin: 0;
     font-weight: bold;
-    background: rgba(255, 182, 193, 0.48);
+    background: rgba(255, 105, 180, 0.25);
     border-radius: 1em;
     padding: 1px;
 }
@@ -181,7 +181,7 @@ p input[type="submit"]{
 }
 
 p input[type="submit"]:hover {
-    background: #fa879a;
+    background: rgba(255, 105, 180, 0.72);
     color: yellow;
     transform: scale(0.97);
 }
