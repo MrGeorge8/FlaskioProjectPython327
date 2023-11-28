@@ -51,7 +51,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    background: rgba(231, 157, 205, 0.83);
+    background: rgba(248, 151, 165, 0.62);
     box-shadow: 2px 2px 11px -3px rgba(67, 67, 67, 0.888);
     padding: 20px;
     border-radius: 1.4rem;
@@ -140,7 +140,7 @@ li div{
 p.title{
     margin: 0;
     font-weight: bold;
-    background: rgba(245, 9, 178, 0.18);
+    background: rgba(255, 182, 193, 0.48);
     border-radius: 1em;
     padding: 1px;
 }
@@ -152,7 +152,7 @@ p.title a{
 .anonce {
     margin-top: -1px;
     margin-bottom: 40px;
-    background: rgba(63, 8, 56, 0.25);
+    background: rgba(63, 8, 56, 0.24);
     font-family: 'Alegreya Sans SC', sans-serif;
     font-weight: bold;
     font-size: 1rem;
@@ -162,8 +162,8 @@ p.title a{
 }
 
 textarea {
-    border: 3px solid rgba(245, 9, 178, 0.1);
-    background: rgba(245, 9, 178, 0.08);
+    border: 3px solid rgba(63, 8, 56, 0.09);
+    background: rgba(255, 182, 193, 0.17);
     color: rgb(90, 6, 141);
     width: 400px;
     height: 118px;
@@ -177,19 +177,20 @@ p input[type="submit"]{
     font-size: 1.6em;
     font-family: monospace;
     border: 1px solid color(display-p3 0.941 0.957 0.961);
-    transition: background-color 0.3s linear, color 0.3s ease;
+    transition: background-color 0.3s linear, color 0.3s ease,transform 0.3s ease-in-out;
 }
 
 p input[type="submit"]:hover {
-    background-color: rgba(108, 78, 182, 0.7);
+    background: #fa879a;
     color: yellow;
+    transform: scale(0.97);
 }
 
 p > input {
     display: block;
     border-radius: 0.7em;
-    border: 2px solid rgba(204, 100, 206, 0.12);
-    background: rgba(245, 9, 178, 0.1);
+    border: 2px solid rgba(63, 8, 56, 0.14);
+    background: rgba(255, 182, 193, 0.27);
 }
 
 .a_menu {
@@ -201,28 +202,28 @@ p > input {
     letter-spacing: 2px;
     transition: background-color 0.3s linear;
     margin: 0;
-    transition: background-color linear 0.7s;
+    transition: background-color 0.3s linear, transform 0.3s ease-in-out;
 }
 
 .a_menu:hover{
-    background-color: rgba(88, 52, 176, 0.43);
-    color: yellow;
+    background: lightpink;
+    color: #ffff02;
     border-radius: 4px;
-
+    transform: scale(1.01);
 }
 
 .page_post{
-    color: rgba(47, 0, 41, 0.96);
+    color: rgba(21, 1, 17, 0.96);
     font-family: 'Alegreya Sans SC', sans-serif;
     font-size: 1.1em;
     font-weight: bold;
     display: block;
     max-height: 600px;
     overflow-y: auto;
-    border: 3px solid rgba(63, 8, 56, 0.16);
+    border: 3px outset rgba(255, 182, 193, 0.71);
     border-radius: 11px;
     margin-top: -25px;
-    background: rgba(255, 255, 255, 0.79);
+    background: rgba(248, 246, 246, 0.89);
 }
 
 .iput{
