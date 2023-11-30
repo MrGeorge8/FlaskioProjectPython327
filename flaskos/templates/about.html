@@ -1,9 +1,16 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block content %}
-<div class="academytop">
-        <img src="https://yt3.googleusercontent.com/dGhI1pLQao45vcEYeZjhkIjZsy60hktQkum5Tu0T2A9pDnyGGyNUlyz5Q3NhQG9XzSWmNP0I4A=s900-c-k-c0x00ffffff-no-rj" alt="">
-</div>
-{{ super() }}
-<h2>Первый учебный проект, созданный с использованием Flask в Top Academy. Здесь мы осваиваем основы Flask, и применяем их для создания функциональных веб-приложений. Проект разрабатывается группой Python327 студентом <span class="person_G">Обливанцевым Георгием</span>  под руководством <span class="person_E"> Елены Козовякиной</span>. </h2>
+    <script>
+        $(document).ready(function() {
+            $(".text-animated").css("transform", "translateX(0)");
+            $(".animatted-top").css("transform", "scale(1)");
+        });
+    </script>
+    <div class="academytop">
+        <img class="animatted-top" style="transform: scale(0); transition: transform 1s;" src="https://yt3.googleusercontent.com/dGhI1pLQao45vcEYeZjhkIjZsy60hktQkum5Tu0T2A9pDnyGGyNUlyz5Q3NhQG9XzSWmNP0I4A=s900-c-k-c0x00ffffff-no-rj" alt="">
+    </div>
+    {{ super() }}
+    <h2 class="text-animated" style="transform: translateX(-100%); transition: transform 1s;">Первый учебный проект, созданный с использованием Flask в Top Academy. Здесь мы осваиваем основы Flask, и применяем их для создания функциональных веб-приложений. Проект разрабатывается группой Python327 студентом <span class="person_G">Обливанцевым Георгием</span>  под руководством <span class="person_E">Елены Козовякиной</span>.</h2>
 {% endblock %}
+

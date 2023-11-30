@@ -208,7 +208,7 @@ p > input {
 .a_menu:hover{
     background: lightpink;
     color: #ffff02;
-    border-radius: 4px;
+    border-radius: 7px;
     transform: scale(1.01);
 }
 
@@ -220,10 +220,10 @@ p > input {
     display: block;
     max-height: 600px;
     overflow-y: auto;
-    border: 3px outset rgba(255, 182, 193, 0.71);
+    border: 3px outset rgba(63, 8, 56, 0.09);
     border-radius: 11px;
     margin-top: -25px;
-    background: rgba(248, 246, 246, 0.89);
+    background: rgba(255, 182, 193, 0.23);
 }
 
 .iput{
