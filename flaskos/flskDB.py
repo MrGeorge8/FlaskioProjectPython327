@@ -38,16 +38,33 @@ class FlaskoDB:
             return False
         return True
 
+    def delete_post(self, post_id):
+        try:
+            self.__cur.execute("DELETE FROM post WHERE id=?", (post_id,))
+            self.__db.commit()
+        except sqlite3.Error as e:
+            print("Ошибка удаления статьи из БД" + str(e))
+            return False
+        return True
+
     def get_post(self, alias):
         try:
-            self.__cur.execute(f"SELECT title, text FROM post WHERE url LIKE '{alias}'")
+            self.__cur.execute(f"SELECT id, title, text FROM post WHERE url LIKE '{alias}'")
             res = self.__cur.fetchone()
             if res:
-                return res
+                post_data = {
+                    'id': res['id'],
+                    'title': res['title'],
+                    'text': res['text']
+                }
+                return post_data
+            else:
+                print(f"No data found for alias '{alias}'")  # Добавьте это для отладки
+                return None
         except sqlite3.Error as e:
-            print("Ошибка добавления статьи в БД" + str(e))
+            print("Ошибка запроса в БД: " + str(e))
 
-            return False, False
+        return None
 
     def get_posts_anonce(self):
         try:

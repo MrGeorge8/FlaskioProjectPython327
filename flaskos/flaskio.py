@@ -1,7 +1,7 @@
 import sqlite3
 import os
 from flask import Flask, render_template, g, url_for, request, flash, session, redirect, abort
-from  flaskos.flskDB import FlaskoDB
+from flaskos.flskDB import FlaskoDB
 
 DATABASE = 'flasko.db'
 DEBUG = True
@@ -9,7 +9,6 @@ SECRET_KEY = '72b81b22e0c3f3714a2b5cc217a912193da0eeab'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-
 app.config.update(dict(DATABASE=os.path.join(app.root_path, "flsako.db")))
 
 def connect_bd():
@@ -50,15 +49,33 @@ def add_post():
 
     return render_template("add_post.html", title="Add Article", menu=dbase.get_menu())
 
+
 @app.route("/posts/<alias>")
 def show_post(alias):
     db = get_db()
     dbase = FlaskoDB(db)
-    title, post = dbase.get_post(alias)
-    if not title:
+    post_data = dbase.get_post(alias)
+
+
+
+    if not post_data:
+        print(f"No data found for alias '{alias}'")  # Добавьте это для отладки
         abort(404)
 
-    return render_template("post.html", menu=dbase.get_menu(), title=title, post=post)
+    indtificator = post_data['id']
+    title = post_data['title']
+    text = post_data['text']
+
+    return render_template("post.html", menu=dbase.get_menu(), title=title, post_data=post_data)
+
+
+@app.route("/delete_post/<int:post_id>", methods=["POST"])
+def delete_post(post_id):
+    db = get_db()
+    dbase = FlaskoDB(db)
+    success = dbase.delete_post(post_id)
+
+    return redirect(url_for('index'))
 
 @app.route("/about")
 def about():

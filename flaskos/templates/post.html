@@ -1,10 +1,15 @@
 {%extends 'base.html' %}
 
 {% block content %}
-
-{{ super() }}
+    {{ super() }}
     <div class="page_post">
-    <p> {{ post | safe }}</p>
+        <p>{{ post_data['text'] | safe }}</p>
     </div>
+    <div class="delete">
+    <form method="post" action="{{ url_for('delete_post', post_id=post_data['id']) }}">
 
+    <input class="button" type="submit" value="Delete">
+</form>
+    </div>
 {% endblock %}
+
