@@ -15,7 +15,7 @@
 <div class="flash {{ cat }}">{{ msg }}</div>
 {% endfor %}
 <div class="flamingo">
-<img class="animatted-flamingo" style="transform: scale(0); transition: transform 2s;" src="{{ url_for('static', filename='images/kandinsky-download-1701115136499.png') }}" alt="flamingo">
+<img class="animatted-flamingo" style="transform: scale(0); transition: transform  2s;" src="{{ url_for('static', filename='images/kandinsky-download-1701115136499.png') }}" alt="flamingo">
 
 </div>
 <form action="{{ url_for('add_post') }}" method="post">
@@ -23,7 +23,7 @@
     <p class="iput" style="transform: translateX(-100%); transition: transform 2.5s"> URL page: <input type="text" name="url" required> </p>
     <p class="iput" style="transform: translateX(-100%); transition: transform 2.6s"> Text page:</p>
     <p class="fly-animatted" style="transform: translateX(-100%); transition: transform 2.7s"> <textarea name="post" cols="30" rows="10"></textarea></p>
-    <p class="button-animated" style="transform: translateY(100%); transition: transform 2.8s"> <input type="submit" value="Adding!"></p>
+    <p class="button-animated" style="transform: translateY(100%); transition: transform 2.0s"> <input type="submit" value="Adding!"></p>
 
 </form>
 {% endblock %}

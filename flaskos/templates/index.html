@@ -9,9 +9,9 @@
             $(".h2-animated").css("transform", "translateX(0)");
         });
     </script>
-    <h2 class="h2-animated" style="transform: translateX(-100%); transition: transform 1s;">Список статей:</h2>
+    <h2 class="h2-animated" style="transform: translateX(-100%); transition: transform linear 1s;">Список статей:</h2>
     <div class="scroll-container">
-    <ul class="scrolling" style="transform: translateY(-100%); transition: transform 0.8s;">
+    <ul class="scrolling" style="transform: translateY(-100%); transition: transform  ease-in-out 0.8s;">
         {% for p in posts %}
         <li>
             <p class="title">
