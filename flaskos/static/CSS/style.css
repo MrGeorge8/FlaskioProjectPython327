@@ -223,7 +223,7 @@ p > input {
     border: 3px outset rgba(63, 8, 56, 0.09);
     border-radius: 11px;
     margin-top: -25px;
-    background: rgba(255, 182, 193, 0.23);
+    background: rgba(253, 218, 224, 0.99);
 }
 
 .iput{
@@ -250,7 +250,7 @@ p > input {
 
 .delete .button{
     font-size: 1.3em;
-    background: rgba(250, 2, 6, 0.82);
+    background: rgb(246, 49, 52);
     font-family: monospace;
     color: #ffffff;
     margin: 10px;
@@ -262,6 +262,7 @@ p > input {
 }
 
 .delete .button:hover{
-    background-color: #ff0004;
+    background-color: #fd1b1e;
     transform: scale(0.9);
+    border: rgba(255, 105, 180, 0.84);
 }
