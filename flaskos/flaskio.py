@@ -49,17 +49,13 @@ def add_post():
 
     return render_template("add_post.html", title="Add Article", menu=dbase.get_menu())
 
-
 @app.route("/posts/<alias>")
 def show_post(alias):
     db = get_db()
     dbase = FlaskoDB(db)
     post_data = dbase.get_post(alias)
 
-
-
     if not post_data:
-        print(f"No data found for alias '{alias}'")
         abort(404)
 
     indtificator = post_data['id']
@@ -67,7 +63,6 @@ def show_post(alias):
     text = post_data['text']
 
     return render_template("post.html", menu=dbase.get_menu(), title=title, post_data=post_data)
-
 
 @app.route("/delete_post/<int:post_id>", methods=["POST"])
 def delete_post(post_id):
