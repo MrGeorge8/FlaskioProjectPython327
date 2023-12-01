@@ -59,7 +59,7 @@ def show_post(alias):
 
 
     if not post_data:
-        print(f"No data found for alias '{alias}'")  # Добавьте это для отладки
+        print(f"No data found for alias '{alias}'")
         abort(404)
 
     indtificator = post_data['id']
